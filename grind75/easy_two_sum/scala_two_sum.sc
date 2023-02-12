@@ -65,13 +65,13 @@ def formatResults(testCase: (Array[Int], Int), approach: (Array[Int], Int) => Ar
 
 @main
 val runTests = {
-  val recursiveApproach = (nums: Array[Int], target: Int) => twoSum(nums, target)
+  val tailRecApproach = (nums: Array[Int], target: Int) => twoSum(nums, target)
   val imperativeApproach = (nums: Array[Int], target: Int) => twoSumImperative(nums, target)
   val imperativeWhileApproach = (nums: Array[Int], target: Int) => twoSumImperativeWhile(nums, target)
 
-  formatResults(testCase1, recursiveApproach)
-  formatResults(testCase2, recursiveApproach)
-  formatResults(testCase3, recursiveApproach)
+  formatResults(testCase1, tailRecApproach)
+  formatResults(testCase2, tailRecApproach)
+  formatResults(testCase3, tailRecApproach)
 
   println("--------------------")
   println("Results from imperative approach:")
